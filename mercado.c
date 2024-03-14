@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int escolhaSetor,escolhaFrios,escolhaPadaria,escolhaAcougue,escolhaBebidas,valorCompra;
+    int escolhaSetor,escolhaFrios,escolhaPadaria,escolhaAcougue,escolhaBebidas,valorCompra, valorPago, calote;
     char listaCompras[4][3][15] = {
         {"Queijo","Presunto","QueijuntoPreso"},
         {"Pão","Sonho","Quindim"},
@@ -26,13 +26,13 @@ int main(){
         switch (escolhaFrios)
         {
         case 1: //Queijo
-
+            valorCompra += 5;
             break;
         case 2: //Presunto
-
+            valorCompra += 6;
             break;
         case 3: //QueijuntoPreso
-
+            valorCompra += 90;
             break;
 
         default:
@@ -48,13 +48,13 @@ int main(){
         switch (escolhaPadaria)
         {
         case 1: //Pão
-
+            valorCompra += 8;
             break;
         case 2: //Sonho
-
+            valorCompra += 999999;
             break;
         case 3: //Quindim
-
+            valorCompra += 10;
             break;
 
         default:
@@ -69,13 +69,13 @@ int main(){
         switch (escolhaAcougue)
         {
         case 1: //Mignon
-
+            valorCompra += 70;
             break;
         case 2: //Alcatra
-
+            valorCompra += 50;
             break;
         case 3: //Frango
-
+            valorCompra += 30;
             break;
 
         default:
@@ -90,13 +90,13 @@ int main(){
         switch (escolhaBebidas)
         {
         case 1: //Cachaça
-
+            valorCompra += 1;
             break;
         case 2: //Monster
-
+            valorCompra += 99;
             break;
         case 3: //Pepsi
-
+            valorCompra += 7;
             break;
 
         default:
@@ -109,4 +109,34 @@ int main(){
         printf("Número inválido");
         break;
     }
+    printf("O valor da sua compra deu: %i,00\n",valorCompra);
+    printf("Por favor insira o dinheiro: ");
+    scanf("%i",&valorPago);
+
+    if (valorPago == valorCompra){
+        printf("\nCertinho, obrigado!");
+    }
+    else if (valorPago > valorCompra){
+        printf("\nAqui está seu troco: %i,00",(valorCompra-valorPago));
+    }
+    else if (valorPago < valorCompra){
+        printf("\nTa querendo me passar a perna? Ainda faltam %i reais, pode pagar o que falta!",(valorPago-valorCompra));
+        scanf("%i",&calote);
+        valorPago += calote;
+        if (valorPago == valorCompra){
+            printf("\nCertinho, obrigado!");
+        }
+        else if (valorPago > valorCompra){
+            printf("\nAqui está seu troco: %i,00",(valorCompra-valorPago));
+        }
+        else if (valorPago < valorCompra){
+            printf("Você ta tentando me enganar mais uma vez? Vai embora da minha loja!");
+        }
+        else{
+            ("Insira um número válido!");
+        }
+    }
+    else{
+            ("Insira um número válido!");
+        }
 }
