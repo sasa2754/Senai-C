@@ -1,0 +1,4 @@
+Depósito no valor de R$2,00.
+Saque no valor de R$2,00.
+Empréstimo no valor de R$700,00.
+Dívida no valor de: R$700
