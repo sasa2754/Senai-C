@@ -32,13 +32,14 @@ int main(){
             scanf("%i", &valor);
             saldo = emprestimo(valor,saldo);
             divida += valor;
-            fprintf(arquivo, "Empréstimo no valor de R$%i,00.\nDívida no valor de: R$%i\n", valor, divida);
+            fprintf(arquivo, "Empréstimo no valor de R$%i,00.\n", valor);
             break;
         case 4:
             // printf("Saldo atual e de: R$%i,00\n", saldo);
             saberSaldo(saldo);
             break;
         case 0:
+            fprintf(arquivo, "Saldo final: R$%i,00\nDívida final: R$%i,00", saldo, divida);
             printf("Tchau!");
             break;
             break;
