@@ -23,6 +23,8 @@ char *pegarLetra(){
 
 int main(){
 
+FILE * palavras;
+palavras = fopen("Palavras.txt", "r");
     while (1){
         pegarLetra();
         printf("%s\n", palavraMetade);
@@ -32,4 +34,6 @@ int main(){
         }
 
     }
+fclose(palavras);
+return 0;
 }
