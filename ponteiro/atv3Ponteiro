@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int trocar(int *numi, float *numf, char *letra){
+    *numi = 123321;
+    *numf = 123.322;
+    *letra = 's';
+}
+int main(){
+    int numInt;
+    float numFloat;
+    char letra;
+
+    printf("Insira um numero inteiro: ");
+    scanf("%i", &numInt);
+    printf("Insira um numero real: ");
+    scanf("%f", &numFloat);
+    printf("Insira uma letra: ");
+    scanf(" %c", &letra);
+
+    printf("%i, %f, %c\n", numInt, numFloat, letra);
+    trocar(&numInt, &numFloat, &letra);
+    printf("%i, %.3f, %c", numInt, numFloat, letra);
+
+
+    return 0;
+}
