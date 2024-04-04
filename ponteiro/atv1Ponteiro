@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int inverter(int *a, int *b){
+    int aux = *a;
+    *a = *b;
+    *b = aux;
+
+}
+
+int main(){
+    int num1 = 50, num2 = 100;
+
+    printf("Valor da variavel num1: %i\n", num1);
+    printf("Valor da variavel num2: %i\n", num2);
+
+    inverter(&num1, &num2);
+    // printf("%i %i", *ptr1, *ptr2);
+    printf("Valor da variavel num1: %i\n", num1);
+    printf("Valor da variavel num2: %i\n", num2);
+
+    return 0;
+}
