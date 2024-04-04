@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int maior(int *a, int *b){
+    return (a>b) ? *a:*b;
+}
+int main(){
+    int num1, num2, numMaior;
+    printf("Digite o primeiro numero: ");
+    scanf("%i", &num1);
+    printf("Digite o segundo numero: ");
+    scanf("%i", &num2);
+
+    numMaior = maior(&num1, &num2);
+    
+    printf("O maior endereco e: %i", numMaior);
+
+    return 0;
+}
