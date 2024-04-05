@@ -1,0 +1,57 @@
+#include <stdio.h>
+int matriz(qtd){
+
+}
+int numero[361];
+int numeroEspiral[361];
+int qtdMatriz = 0, meio = 0, totalMatriz = 0;
+int main(){
+    printf("Escolha o tamanho da matriz: (3/5/7/9/11/13/15/17/19)");
+    scanf("%i", &qtdMatriz);
+    totalMatriz = qtdMatriz*qtdMatriz;
+    
+    switch (qtdMatriz){
+    case 3:
+        // int numero[totalMatriz];
+        int numeroEspiral[361];
+        break;
+    case 5:
+        int numero[361];
+        int numeroEspiral[361];
+        break;
+    case 7:
+        int numero[361];
+        int numeroEspiral[361];
+        break;
+    case 9:
+        int numero[361];
+        int numeroEspiral[361];
+        break;
+    case 11:
+        int numero[361];
+        int numeroEspiral[361];
+        break;
+    case 13:
+        int numero[361];
+        int numeroEspiral[361];
+        break;
+    case 15:
+        int numero[361];
+        int numeroEspiral[361];
+        break;
+    case 17:
+        int numero[361];
+        int numeroEspiral[361];
+        break;
+    case 19:
+        int numero[361];
+        int numeroEspiral[361];
+        break;
+    
+    default:
+        printf("Insira um numero valido!");
+        break;
+    }
+
+    return 0;
+}
