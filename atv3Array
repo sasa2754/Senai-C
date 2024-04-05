@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int main(){
+    float notas[50][5];
+    int qtdAlunos;
+    char nomesAlunos[50][101], nomeCurso[99];
+
+    printf("Digite o nome do curso com underline: ");
+    scanf("%s", &nomeCurso);
+    printf("Digite a quantidade de alunos que voce gostaria de inserir: ");
+    scanf("%i", &qtdAlunos);
+
+    for(int i=0;i<qtdAlunos;i++){
+        printf("Digite o nome do %io aluno com underline: ", i+1);
+        scanf("%s",&nomesAlunos[i]);
+    }
+
+    for(int aluno=0;aluno<qtdAlunos;aluno++){
+        for(int nota=0;nota<3;nota++){
+            printf("Digite a %d nota do aluno ", nota+1);
+            for(int k=0;k<101;k++){ 
+                printf("%c", nomesAlunos[aluno][k]);
+            }
+            printf(": ");
+            scanf("%f", &notas[aluno][nota]);
+        }
+    }
+
+    for(int aluno=0;aluno<qtdAlunos;aluno++){
+        printf("Aluno(a): ");
+        for(int k=0;k<101;k++){
+            printf("%c", nomesAlunos[aluno][k]);
+        }
+        printf("\n");
+        for(int nota=0;nota<3;nota++){
+            printf("Nota %i: %i\n",nota+1,notas[aluno][nota]);
+        }
+    }
+    
+    // for(int i=0;i<qtdAlunos;i++){
+    //     for(int j=0;j<101;j++){
+    //         printf("%c", cursoNomes[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+    
+
+    return 0;
+}
