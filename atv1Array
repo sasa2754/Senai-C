@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(){
+    int array[5], total = 0;
+
+    for (int i=0;i<5;i++){
+        printf("Digite o %io numero: ", i+1);
+        scanf("%i", &array[i]);
+        total += array[i];
+    }
+    printf("A soma dos numeros e: %i", total);
+    return 0;
+}
