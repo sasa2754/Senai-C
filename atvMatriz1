@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main(){
+    FILE *arquivo;
+    arquivo = fopen("arquivo.txt", "w");
+    int qtd;
+
+    printf("Quantos alunos voce gostaria de inserir? ");
+    scanf("%i", &qtd);
+    char nomeAlunos[qtd][100]; 
+    int notas[qtd][3];
+
+    for(int i=0;i<qtd;i++){
+        printf("Digite o nome do aluno %i: ", i+1);
+        scanf("%s", nomeAlunos[i]);
+    }
+
+    //  for(int i=0;i<qtd;i++){
+    //     printf("%s ", nomeAlunos[i]);
+    //  }
+
+    for(int aluno=0;aluno<qtd;aluno++){
+        for(int nota=0;nota<3;nota++){
+            printf("Digite a %io nota do aluno(a) ", nota+1);
+            printf("%s", nomeAlunos[aluno]);
+            printf(": ");
+            scanf("%i", &notas[aluno][nota]);
+        }
+    }
+
+    for(int aluno=0;aluno<qtd;aluno++){
+        printf("Aluno(a) %s: \n", nomeAlunos[aluno]);
+        fprintf(arquivo, "Aluno(a) %s: \n", nomeAlunos[aluno]);
+        for(int nota=0;nota<3;nota++){
+            printf("Nota %i: ", nota+1);
+            printf("%i\n", notas[aluno][nota]);
+            fprintf(arquivo, "Nota %i: ", nota+1);
+            fprintf(arquivo, "%i\n", notas[aluno][nota]);
+        }
+        printf("\n");
+        fprintf(arquivo, "\n");
+    }
+
+    
+    fclose(arquivo);
+    return 0;
+}
