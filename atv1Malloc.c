@@ -2,26 +2,21 @@
 #include <stdlib.h>
 
 int main(){
-    int qtd, soma = 0;
+    int qtd = 0;
 
-    printf("Digite a quantidade de elementos do vetor: ");
+    printf("Insira um numero para ser a quantidade do array: ");
     scanf("%i", &qtd);
 
-    int *vetor = malloc(qtd * sizeof(int));
+    int *array = malloc(qtd * sizeof(int));
 
-    for(int i=0;i<qtd;i++){
+    for (int i=0;i<qtd;i++){
         printf("Digite um numero para a posicao [%i]: ", i);
-        scanf("%i", &vetor[i]);
+        scanf("%i", &array[i]);
     }
-    for(int i=0;i<qtd;i++){
-        printf("%i ", vetor[i]);
-        if(vetor[i]%2 != 0){
-            soma+=vetor[i];
-        }
-        printf("A soma dos numeros impares e: %i", soma);
+    for (int i=0;i<qtd;i++){
+        printf("%i ", array[i]);
     }
 
-    free(vetor);
+    free(array);
     return 0;
 }
-
